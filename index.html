@@ -1,17 +1,37 @@
 <head>
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css"
         type="text/css">
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
     <title>OpenLayers example</title>
 </head>
 
 <div id="map"></div>
+
+<div class="container">
+    <form>
+        <label for="longitude">Longitude</label>
+        <input type="number" name="longitude" id="longitude" type="text" />
+        <label for="latitude">Latitude</label>
+        <input type="number" name="latitude" id="latitude" type="text" />
+        <button type="button" 
+            onclick="mapManipulator.AddPoint(parseFloat(document.getElementById('longitude').value), parseFloat(document.getElementById('latitude').value))"
+            >Submit</button>
+    </form>
+</div>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    padding: 25px;
+}
+.container {
+    margin: 25px;
+}
+</style>
 
 <script src="./base.js"></script>
 <script src="./app.js"></script>

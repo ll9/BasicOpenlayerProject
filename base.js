@@ -3,7 +3,7 @@ class MapManipulator {
         this.VectorSource = new ol.source.Vector();
         this.Map = this.InitMap();
 
-        this.AddPoint(12.363360, 47.815700)
+        // this.AddPoint(12.363360, 47.815700)
     }
 
     InitMap() {
